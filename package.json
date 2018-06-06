@@ -10,7 +10,7 @@
   },
   "main": "app.js",
   "scripts": {
-    "install": "git clone https://raw.githubusercontent.com/yzazy/mlab4r && cp setup.json mlab4r/config.json",
+    "install": "git clone https://github.com/yzazy/mlab4r && cp setup.json mlab4r/config.json",
     "start": "node mlab4r/app",
     "lint": "eslint --cache ./nodebb .",
     "pretest": "npm run lint",
