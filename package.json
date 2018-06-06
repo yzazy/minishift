@@ -1,22 +1,22 @@
 {
-  "name": "nodebb.vn",
+  "name": "nodebb",
   "license": "GPL-3.0",
   "description": "NodeBB Forum",
   "version": "1.9.3",
   "homepage": "http://www.nodebb.org",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NodeBB/NodeBB.git"
+    "url": "https://github.com/NodeBB/NodeBB/"
   },
-  "main": "./NodeBB/app.js",
-    "scripts": {
-        "install": "git clone https://github.com/NodeBB/NodeBB",
-        "start": "cp setup.json ./NodeBB/config.json && ./NodeBB/nodebb dev",
-        "lint": "eslint --cache ./nodebb .",
-        "pretest": "npm run lint",
-        "test": "nyc --reporter=html --reporter=text-summary mocha",
-        "coveralls": "nyc report --reporter=text-lcov | coveralls && rm -r coverage"
-    },
+  "main": "app.js",
+  "scripts": {
+    "install": "git clone https://raw.githubusercontent.com/yzazy/mlab4r && cp setup.json mlab4r/config.json",
+    "start": "node mlab4r/app",
+    "lint": "eslint --cache ./nodebb .",
+    "pretest": "npm run lint",
+    "test": "nyc --reporter=html --reporter=text-summary mocha",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls && rm -r coverage"
+  },
   "dependencies": {
     "ace-builds": "^1.2.9",
     "archiver": "^2.1.1",
@@ -56,7 +56,7 @@
     "jsesc": "2.5.1",
     "json-2-csv": "^2.1.2",
     "less": "^3.0.4",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.5",
     "logrotate-stream": "^0.2.5",
     "lru-cache": "4.1.3",
     "material-design-lite": "^1.3.0",
@@ -67,7 +67,6 @@
     "mousetrap": "^1.6.1",
     "mubsub-nbb": "^1.5.0",
     "nconf": "^0.10.0",
-    "nodebb-plugin-cash": "^0.2.5",
     "nodebb-plugin-composer-default": "6.0.26",
     "nodebb-plugin-dbsearch": "2.0.17",
     "nodebb-plugin-emoji": "^2.2.2",
@@ -75,9 +74,11 @@
     "nodebb-plugin-markdown": "8.4.3",
     "nodebb-plugin-mentions": "2.2.6",
     "nodebb-plugin-soundpack-default": "1.0.0",
+    "nodebb-plugin-spam-be-gone": "0.5.3",
     "nodebb-rewards-essentials": "0.0.11",
     "nodebb-theme-lavender": "5.0.4",
-    "nodebb-theme-persona": "^9.0.14",
+    "nodebb-theme-persona": "9.0.10",
+    "nodebb-theme-slick": "1.2.3",
     "nodebb-theme-vanilla": "10.0.10",
     "nodebb-widget-essentials": "4.0.4",
     "nodemailer": "^4.6.5",
@@ -96,7 +97,7 @@
     "serve-favicon": "^2.4.5",
     "sitemap": "^1.13.0",
     "socket.io": "2.1.1",
-    "socket.io-adapter-mongo": "^2.0.3",
+    "socket.io-adapter-mongo": "^2.0.1",
     "socket.io-client": "2.1.1",
     "socket.io-redis": "5.2.0",
     "socketio-wildcard": "2.0.0",
@@ -115,7 +116,7 @@
     "eslint": "^4.14.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "grunt": "^1.0.3",
+    "grunt": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "jsdom": "^11.5.1",
     "mocha": "^4.1.0",
@@ -130,15 +131,20 @@
     "node": ">=6"
   },
   "maintainers": [
-    "Andrew Rodrigues <andrew@nodebb.org> (https://github.com/psychobunny)",
-    "Julian Lam <julian@nodebb.org> (https://github.com/julianlam)",
-    "Barış Soner Uşaklı <baris@nodebb.org> (https://github.com/barisusakli)"
-  ],
-  "directories": {
-    "test": "test"
-  },
-  "keywords": [
-    "nodebb"
-  ],
-  "author": "nodebb"
+    {
+      "name": "Andrew Rodrigues",
+      "email": "andrew@nodebb.org",
+      "url": "https://github.com/psychobunny"
+    },
+    {
+      "name": "Julian Lam",
+      "email": "julian@nodebb.org",
+      "url": "https://github.com/julianlam"
+    },
+    {
+      "name": "Barış Soner Uşaklı",
+      "email": "baris@nodebb.org",
+      "url": "https://github.com/barisusakli"
+    }
+  ]
 }
