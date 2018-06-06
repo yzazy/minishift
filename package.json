@@ -10,8 +10,8 @@
   },
   "main": "NodeBB/app.js",
   "scripts": {
-    "install": "git clone https://github.com/NodeBB/NodeBB && cp setup.json NodeBB/config.json && NodeBB/nodebb upgrade",
-    "start": "NodeBB/nodebb dev"
+    "install": "git clone https://github.com/NodeBB/NodeBB && cp setup.json NodeBB/config.json",
+    "start": "NodeBB/nodebb upgrade && NodeBB/nodebb dev"
   },
   "dependencies": {
     "debug": "^3.1.0"
