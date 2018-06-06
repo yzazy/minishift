@@ -14,14 +14,10 @@
     "start": "NodeBB/nodebb upgrade && node NodeBB/app"
   },
   "dependencies": {
-    "debug": "^3.1.0",
-    "nodebb-plugin-dbsearch": "2.0.17",
-    "nodebb-plugin-cash": "^0.2.5",
-    "zxcvbn": "^4.4.2"
+    "debug": "^3.1.0"
   },
   "devDependencies": {
-    "nyc": "^11.4.1",
-    "smtp-server": "^3.4.1"
+    "nyc": "^11.4.1"
   },
   "bugs": {
     "url": "https://github.com/NodeBB/NodeBB/issues"
