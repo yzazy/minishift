@@ -10,9 +10,8 @@
   },
   "main": "./NodeBB/app.js",
     "scripts": {
-      "build": "git clone https://github.com/NodeBB/NodeBB",
-        "install": "cp setup.json ./NodeBB/config.json",
-        "start": "node ./NodeBB/app.js",
+        "install": "git clone https://github.com/NodeBB/NodeBB",
+        "start": "cp setup.json ./NodeBB/config.json && ./NodeBB/nodebb dev",
         "lint": "eslint --cache ./nodebb .",
         "pretest": "npm run lint",
         "test": "nyc --reporter=html --reporter=text-summary mocha",
