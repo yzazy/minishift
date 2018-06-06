@@ -8,10 +8,11 @@
     "type": "git",
     "url": "git+https://github.com/NodeBB/NodeBB.git"
   },
-  "main": "app.js",
+  "main": "./NodeBB/app.js",
     "scripts": {
-        "install": "git clone https://github.com/NodeBB/NodeBB",
-        "start": "cp setup.json ./NodeBB/config.json && ./NodeBB/nodebb dev",
+      "build": "git clone https://github.com/NodeBB/NodeBB",
+        "install": "cp setup.json ./NodeBB/config.json && ./NodeBB/nodebb setup",
+        "start": "node ./NodeBB/app.js",
         "lint": "eslint --cache ./nodebb .",
         "pretest": "npm run lint",
         "test": "nyc --reporter=html --reporter=text-summary mocha",
