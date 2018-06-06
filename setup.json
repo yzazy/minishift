@@ -1,5 +1,5 @@
 {
-    "url": "https://js-b1.a3c1.starter-us-west-1.openshiftapps.com",
+    "url": "http://js-rhc.192.168.99.100.nip.io",
     "secret": "4154d41c-d081-41f6-9666-abb25f10353b",
     "database": "mongo",
     "mongo": {
