@@ -8,10 +8,10 @@
     "type": "git",
     "url": "https://github.com/NodeBB/NodeBB/"
   },
-  "main": "app.js",
+  "main": "NodeBB/app.js",
   "scripts": {
-    "install": "git clone https://github.com/yzazy/mlab4r && cp setup.json mlab4r/config.json",
-    "start": "node mlab4r/app",
+    "install": "git clone https://github.com/yzazy/NodeBB && cp setup.json NodeBB/config.json",
+    "start": "NodeBB/nodebb upgrade && node NodeBB/app",
     "lint": "eslint --cache ./nodebb .",
     "pretest": "npm run lint",
     "test": "nyc --reporter=html --reporter=text-summary mocha",
