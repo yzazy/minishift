@@ -11,7 +11,7 @@
   "main": "./NodeBB/app.js",
     "scripts": {
       "build": "git clone https://github.com/NodeBB/NodeBB",
-        "install": "cp setup.json ./NodeBB/config.json && ./NodeBB/nodebb upgrade",
+        "install": "cp setup.json ./NodeBB/config.json",
         "start": "node ./NodeBB/app.js",
         "lint": "eslint --cache ./nodebb .",
         "pretest": "npm run lint",
